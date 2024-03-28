@@ -19,28 +19,34 @@ public class view {
         static Circulo circulo = new Circulo(5d);
 
         public static void main(String[] args) {
-                int opcao = Integer.parseInt(JOptionPane.showInputDialog(
-                                "Escolha uma opção:\n1 - Pessoa\n2 - Funcionário\n3 - Conta Bancária\n4 - Produto\n5 - Círculo"));
+                int opcao = 1;
+                while (opcao != 6) {
+                        opcao = Integer.parseInt(JOptionPane.showInputDialog(
+                                        "Escolha uma opção:\n1 - Pessoa\n2 - Funcionário\n3 - Conta Bancária\n4 - Produto\n5 - Círculo\n6 - Sair"));
 
-                switch (opcao) {
-                        case 1:
-                                viewPessoa();
-                                break;
-                        case 2:
-                                viewFuncionario();
-                                break;
-                        case 3:
-                                viewContaBancaria();
-                                break;
-                        case 4:
-                                viewProduto();
-                                break;
-                        case 5:
-                                viewCirculo();
-                                break;
-                        default:
-                                JOptionPane.showMessageDialog(null, "Opção inválida");
-                                break;
+                        switch (opcao) {
+                                case 1:
+                                        viewPessoa();
+                                        break;
+                                case 2:
+                                        viewFuncionario();
+                                        break;
+                                case 3:
+                                        viewContaBancaria();
+                                        break;
+                                case 4:
+                                        viewProduto();
+                                        break;
+                                case 5:
+                                        viewCirculo();
+                                        break;
+                                case 6:
+                                        JOptionPane.showMessageDialog(null, "Saindo...");
+                                        break;
+                                default:
+                                        JOptionPane.showMessageDialog(null, "Opção inválida");
+                                        break;
+                        }
                 }
         }
 
