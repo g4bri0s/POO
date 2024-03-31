@@ -20,13 +20,12 @@ public class view {
     private static AgendaTelefonica agenda;
     private static Contato contato;
 
-    public static void main() {
+    public static void main(String[] args) {
         int opcao = 0;
 
         while (opcao != 4) {
-            opcao = Integer.parseInt(System.console()
-                    .readLine(
-                            "1 - Lançar novo pedido\n2 - Tocar música\n3 - Ver contatos\n4 - Sair\nEscolha uma opção:"));
+            opcao = Integer.parseInt(JOptionPane.showInputDialog(
+                    "1 - Lançar novo pedido\n2 - Tocar música\n3 - Ver contatos\n4 - Sair"));
 
             switch (opcao) {
                 case 1:
