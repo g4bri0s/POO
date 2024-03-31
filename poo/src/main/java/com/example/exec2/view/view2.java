@@ -10,7 +10,7 @@ import com.example.exec2.model.Pedido;
 import com.example.exec2.model.Playlist;
 import com.example.exec2.model.Produto;
 
-public class view {
+public class view2 {
 
     private static Pedido pedido;
     private static ItemPedido itemPedido;
