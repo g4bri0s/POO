@@ -14,23 +14,26 @@ public class view3 {
     public static void main(String[] args) {
         int opcao = 0;
 
-        while (opcao != 3) {
-            opcao = Integer.parseInt(JOptionPane
-                    .showInputDialog("1 - Zoo\n2 - Contas\n3 - Sair"));
-            view3 view = new view3();
+        while (opcao == 0) {
+            String[] options = { "Zoo", "Contas", "Sair" };
+            opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", 0, JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    options, options[0]);
+
             switch (opcao) {
-                case 1:
+                case 0:
                     viewZoo();
                     break;
-                case 2:
+                case 1:
                     viewContas();
                     break;
-                case 3:
+                case 2:
+                    opcao = 1;
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", 0);
                     break;
             }
+
         }
 
     }
@@ -38,7 +41,7 @@ public class view3 {
     public static void viewZoo() {
         int opcao = 0;
 
-        while (opcao != 4) {
+        while (opcao == 0) {
             String[] options = { "Animal", "Mamífero", "Peixe", "Sair" };
             opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Zoo", 0,
                     JOptionPane.QUESTION_MESSAGE,
@@ -54,7 +57,7 @@ public class view3 {
                     zoo.viewPeixe();
                     break;
                 case 3:
-                    opcao = 4;
+                    opcao = 1;
                     break;
                 default:
                     break;
@@ -65,7 +68,7 @@ public class view3 {
     public static void viewContas() {
         int opcao = 0;
 
-        while (opcao != 4) {
+        while (opcao == 0) {
             String[] options = { "Conta Bancária", "Conta Especial", "Conta Poupança", "Sair" };
             opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Contas", 0,
                     JOptionPane.QUESTION_MESSAGE,
@@ -74,15 +77,18 @@ public class view3 {
             switch (opcao) {
                 case 0:
                     view.viewContaBancaria();
+                    opcao = 0;
                     break;
                 case 1:
                     view.viewContaEspecial();
+                    opcao = 0;
                     break;
                 case 2:
                     view.viewContaPoupanca();
+                    opcao = 0;
                     break;
                 case 3:
-                    opcao = 4;
+                    opcao = 1;
                     break;
                 default:
                     break;
