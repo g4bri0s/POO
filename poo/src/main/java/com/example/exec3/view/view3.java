@@ -14,10 +14,51 @@ public class view3 {
     public static void main(String[] args) {
         int opcao = 0;
 
+        while (opcao != 3) {
+            opcao = Integer.parseInt(JOptionPane
+                    .showInputDialog("1 - Zoo\n2 - Contas\n3 - Sair"));
+            view3 view = new view3();
+            switch (opcao) {
+                case 1:
+                    viewZoo();
+                    break;
+                case 2:
+                    viewContas();
+                    break;
+                case 3:
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", 0);
+                    break;
+            }
+        }
+
     }
 
     public static void viewZoo() {
+        int opcao = 0;
 
+        while (opcao != 4) {
+            opcao = Integer.parseInt(JOptionPane
+                    .showInputDialog("1 - Animal\n2 - Mamífero\n3 - Peixe\n4 - Sair"));
+            view3 view = new view3();
+            switch (opcao) {
+                case 1:
+                    zoo.viewAnimal();
+                    break;
+                case 2:
+                    zoo.viewMamifero();
+                    break;
+                case 3:
+                    zoo.viewPeixe();
+                    break;
+                case 4:
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", 0);
+                    break;
+            }
+        }
     }
 
     public static void viewContas() {
