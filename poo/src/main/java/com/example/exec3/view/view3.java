@@ -39,23 +39,24 @@ public class view3 {
         int opcao = 0;
 
         while (opcao != 4) {
-            opcao = Integer.parseInt(JOptionPane
-                    .showInputDialog("1 - Animal\n2 - Mamífero\n3 - Peixe\n4 - Sair"));
-            view3 view = new view3();
+            String[] options = { "Animal", "Mamífero", "Peixe", "Sair" };
+            opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Zoo", 0,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null, options, options[0]);
             switch (opcao) {
-                case 1:
+                case 0:
                     zoo.viewAnimal();
                     break;
-                case 2:
+                case 1:
                     zoo.viewMamifero();
                     break;
-                case 3:
+                case 2:
                     zoo.viewPeixe();
                     break;
-                case 4:
+                case 3:
+                    opcao = 4;
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", 0);
                     break;
             }
         }
@@ -65,23 +66,25 @@ public class view3 {
         int opcao = 0;
 
         while (opcao != 4) {
-            opcao = Integer.parseInt(JOptionPane
-                    .showInputDialog("1 - Conta Bancária\n2 - Conta Especial\n3 - Conta Poupança\n4 - Sair"));
+            String[] options = { "Conta Bancária", "Conta Especial", "Conta Poupança", "Sair" };
+            opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Contas", 0,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null, options, options[0]);
             view3 view = new view3();
             switch (opcao) {
-                case 1:
+                case 0:
                     view.viewContaBancaria();
                     break;
-                case 2:
+                case 1:
                     view.viewContaEspecial();
                     break;
-                case 3:
+                case 2:
                     view.viewContaPoupanca();
                     break;
-                case 4:
+                case 3:
+                    opcao = 4;
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", 0);
                     break;
             }
         }
